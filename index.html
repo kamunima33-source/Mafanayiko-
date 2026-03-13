@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ultimate Smart Calculator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+<div class="card calculator">
+<h2>Scientific Calculator</h2>
+<input id="display" readonly placeholder="0">
+
+<div class="buttons">
+<button onclick="clearDisplay()">C</button>
+<button onclick="deleteLast()">DEL</button>
+<button onclick="append('%')">%</button>
+<button onclick="append('/')">÷</button>
+
+<button onclick="append('7')">7</button>
+<button onclick="append('8')">8</button>
+<button onclick="append('9')">9</button>
+<button onclick="append('*')">×</button>
+
+<button onclick="append('4')">4</button>
+<button onclick="append('5')">5</button>
+<button onclick="append('6')">6</button>
+<button onclick="append('-')">-</button>
+
+<button onclick="append('1')">1</button>
+<button onclick="append('2')">2</button>
+<button onclick="append('3')">3</button>
+<button onclick="append('+')">+</button>
+
+<button onclick="append('0')" class="zero">0</button>
+<button onclick="append('.')">.</button>
+<button onclick="calculate()">=</button>
+</div>
+
+<div class="sci">
+<button onclick="square()">x²</button>
+<button onclick="sqrt()">√</button>
+<button onclick="append('Math.PI')">π</button>
+<button onclick="append('Math.sin(')">sin</button>
+<button onclick="append('Math.cos(')">cos</button>
+<button onclick="append('Math.tan(')">tan</button>
+</div>
+
+</div>
+
+<div class="card history">
+<h2>History</h2>
+<ul id="historyList"></ul>
+<button onclick="clearHistory()">Clear History</button>
+</div>
+
+<div class="card currency">
+<h2>Currency Converter</h2>
+
+<input id="amount" type="number" placeholder="Amount">
+
+<input id="search" placeholder="Search currency">
+
+<select id="from"></select>
+<select id="to"></select>
+
+<button onclick="swap()">Swap</button>
+<button onclick="convert()">Convert</button>
+
+<p id="result"></p>
+</div>
+
+<div class="card unit">
+<h2>Unit Converter</h2>
+
+<input id="unitInput" type="number" placeholder="Value">
+
+<select id="unitType">
+<option value="km">Kilometers → Miles</option>
+<option value="kg">Kilograms → Pounds</option>
+<option value="c">Celsius → Fahrenheit</option>
+</select>
+
+<button onclick="convertUnit()">Convert</button>
+
+<p id="unitResult"></p>
+
+</div>
+
+</div>
+
+<script src="calculator.js"></script>
+<script src="history.js"></script>
+<script src="currency.js"></script>
+<script src="unit.js"></script>
+
+</body>
+</html>
