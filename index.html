@@ -14,6 +14,27 @@
 <div class="card calculator">
 <h2>Scientific Calculator</h2>
 <input id="display" readonly placeholder="0">
+  <div id="welcomePopup" class="popup">
+    <div class="popup-content">
+        <h2>Welcome to Smart Calculator</h2>
+
+        <p>
+            This calculator was proudly designed by <strong>Mafanayiko</strong>.
+        </p>
+
+        <p>
+            If you would like to support the development of this calculator,
+            you can contribute using the following bank details:
+        </p>
+
+        <p>
+            <strong>Bank:</strong> FNB <br>
+            <strong>Account Number:</strong> 00000440336
+        </p>
+
+        <button onclick="closePopup()">Close</button>
+    </div>
+</div>
 
 <div class="buttons">
 <button onclick="clearDisplay()">C</button>
@@ -97,6 +118,10 @@
 <script src="history.js"></script>
 <script src="currency.js"></script>
 <script src="unit.js"></script>
-
+<script>
+function closePopup(){
+    document.getElementById("welcomePopup").style.display="none";
+}
+</script>
 </body>
 </html>
